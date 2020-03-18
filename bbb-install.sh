@@ -615,10 +615,10 @@ configure_HTML5() {
 install_greenlight(){
   need_pkg software-properties-common openssl
 
-  if ! dpkg -l | grep -q linux-image-extra-virtual; then
+  if ! dpkg -l | grep -q linux-modules-extra-virtual; then
     apt-get install -y \
-      linux-image-extra-$(uname -r) \
-      linux-image-extra-virtual
+      linux-modules-extra-$(uname -r) \
+      linux-modules-extra-virtual
   fi
 
   # Install Docker
